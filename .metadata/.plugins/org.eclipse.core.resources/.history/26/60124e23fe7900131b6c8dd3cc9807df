@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+
+/**
+ * @author nnapier
+ *
+ */
+public class ClothingItemTester 
+{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+		// 1) Create an object that represents a red blouse
+		//    that is cotton and costs 34.50. Brand is Nike
+		ClothingItem blouse = new ClothingItem();  
+		blouse.setMaterial("cotton");
+		blouse.setPrice(34.5);
+		
+		//    SOP the object that you created
+		
+		// 2) Create an objec that represents green shoes that are
+		//    leather and cost 89.34. Brand is Addias
+		
+		
+//	    SOP the object that you created
+
+	}
+
+}

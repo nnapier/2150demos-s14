@@ -1,0 +1,16 @@
+/**Class: ClothingItem 
+ * @author Nannette Napier
+ * @version 1.0
+ * Course: ITEC 2150 Spring 2014
+ * Written: January 10, 2014
+ * 
+ * 
+ * This class represents an item of clothing that can be
+ * sold in our store
+ * 
+ * Purpose: Represent an item of clothing
+ */
+public class ClothingItem 
+{
+
+}
