@@ -1,26 +1,26 @@
-/**
- * Class: ClothingItem
- * 
+/**Class: ClothingItem 
  * @author Nannette Napier
- * @version 1.0 Course: ITEC 2150 Spring 2014 Written: January 10, 2014
+ * @version 1.0
+ * Course: ITEC 2150 Spring 2014
+ * Written: January 10, 2014
  * 
  * 
- *          This class represents an item of clothing that can be sold in our
- *          store
+ * This class represents an item of clothing that can be
+ * sold in our store
  * 
- *          Purpose: Represent an item of clothing
+ * Purpose: Represent an item of clothing
  */
-public class ClothingItem
+public class ClothingItem 
 {
 	// Instance Variables
 	private String brand; // Brands such as Nike, Addias
-	private String size; // Sizes such as S, M, L, XL
+	private String size;  // Sizes such as S, M, L, XL
 	private double price; // Price of the clothing item
 	private String color; // Color of the item (such as Red, blue)
 	private String material; // Material of the item (such as cotton)
-
+	
 	// Constructor(s)
-	public ClothingItem() // No argument constructor
+	public ClothingItem()  // No argument constructor
 	{
 		// Initialize all the instance variables
 		brand = "Unknown";
@@ -30,9 +30,9 @@ public class ClothingItem
 		material = "cotton";
 	}
 
-	// 1) Create a constructor that has only 1 parameter: aBrand.
+	// 1) Create a constructor that has only 1 parameter: aBrand. 
 	// Set the other instance variables to reasonable default values
-
+	
 	public ClothingItem(String aBrand)
 	{
 		brand = aBrand;
@@ -41,11 +41,12 @@ public class ClothingItem
 		color = "Red";
 		material = "cotton";
 	}
+	
 
 	// 2) Create a constructor that has 5 parameter variables --
-	// one for each of the instance variables
+	//    one for each of the instance variables
 	public ClothingItem(String aBrand, String aSize, double aPrice,
-			String aColor, String aMaterial)
+			            String aColor, String aMaterial)
 	{
 		brand = aBrand;
 		size = aSize;
@@ -53,93 +54,78 @@ public class ClothingItem
 		color = aColor;
 		material = aMaterial;
 	}
-
+	
 	// Getters and Setters
 	/**
 	 * @return the brand
 	 */
-	public String getBrand()
-	{
+	public String getBrand() {
 		return brand;
 	}
 
 	/**
 	 * @return the size
 	 */
-	public String getSize()
-	{
+	public String getSize() {
 		return size;
 	}
 
 	/**
 	 * @return the price
 	 */
-	public double getPrice()
-	{
+	public double getPrice() {
 		return price;
 	}
 
 	/**
 	 * @return the color
 	 */
-	public String getColor()
-	{
+	public String getColor() {
 		return color;
 	}
 
 	/**
 	 * @return the material
 	 */
-	public String getMaterial()
-	{
+	public String getMaterial() {
 		return material;
 	}
 
 	/**
-	 * @param brand
-	 *            the brand to set
+	 * @param brand the brand to set
 	 */
-	public void setBrand(String brand)
-	{
+	public void setBrand(String brand) {
 		this.brand = brand;
 	}
 
 	/**
-	 * @param size
-	 *            the size to set
+	 * @param size the size to set
 	 */
-	public void setSize(String size)
-	{
+	public void setSize(String size) {
 		this.size = size;
 	}
 
 	/**
-	 * @param price
-	 *            the price to set
+	 * @param price the price to set
 	 */
-	public void setPrice(double price)
-	{
+	public void setPrice(double price) {
 		this.price = price;
 	}
 
 	/**
-	 * @param color
-	 *            the color to set
+	 * @param color the color to set
 	 */
-	public void setColor(String color)
-	{
+	public void setColor(String color) {
 		this.color = color;
 	}
 
 	/**
-	 * @param material
-	 *            the material to set
+	 * @param material the material to set
 	 */
-	public void setMaterial(String material)
-	{
+	public void setMaterial(String material) {
 		this.material = material;
 	}
-
+		
 	// Instance methods
 	public String toString()
 	{
@@ -150,19 +136,20 @@ public class ClothingItem
 		value += " \tMaterial is " + material + "\n";
 		return value;
 	}
-
-	// Create an instance method called computeDiscount.
+	
+	// Create an instance method called computeDiscount. 
 	// It takes as a parameter the percentage of the discount
 	// It returns the discounted price. It does not
-	// modify any of the instance variables.
+	// modify any of the instance variables. 
 	public double computeDiscount(double percentage)
 	{
 		// 1 - compute the discounted amount
-		double discount = price * percentage;
-
+		double discount = price * percentage; 
+		
 		// 2 - Subtract the discount from the original price
-		// return this value
+		//     return this value
 		return price - discount;
 	}
+	
 
 }
