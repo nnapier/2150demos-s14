@@ -19,6 +19,7 @@ public class ClawCard
 	private boolean valid;
 	private Date dateIssued;
 	
+	
 	// Static variables -- shared by all objects of the ClawCard class
 	private static int lastIdUsed = 9000;
 	
