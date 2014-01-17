@@ -14,6 +14,7 @@ import java.util.Date;
 public class ClawCardTester
 {
 
+	
 	/**
 	 * @param args
 	 */
