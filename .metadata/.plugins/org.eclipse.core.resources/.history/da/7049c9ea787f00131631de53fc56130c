@@ -19,39 +19,14 @@ public class ClawCard
 	private boolean valid;
 	private Date dateIssued;
 	
-	
 	// Static variables -- shared by all objects of the ClawCard class
 	private static int lastIdUsed = 9000;
 	
 	// Constructor
-	/**
-	 * No-arugment constructor
-	 */
-	public ClawCard()
-	{
-		this("John Doe", "Student");		
-	}
-	
-	/**
-	 * 1 argument constructor
-	 * @param aName
-	 */
-	public ClawCard(String aName)
-	{
-		this( aName, "Student");
-	}
-	
 	public ClawCard(String aName, String aStatus)
 	{
-		id = lastIdUsed + 1;
 		name = aName;
 		status = aStatus;
-		valid = true;
-		
-		// Set the dateIssued to the current date		
-		dateIssued = new Date();
-		
-		lastIdUsed++; // lastIdUsed = lastIdUsed + 1;
 	}
 	
 	/**
@@ -143,22 +118,6 @@ public class ClawCard
 	{
 		return lastIdUsed + 1;
 	}
-	/**
-	 * Return the smallest ID of the two passed in
-	 * @param id1
-	 * @param id2
-	 * @return
-	 */
-	public static int min(int id1, int id2)
-	{
-		if (id1 < id2)
-		{
-			return id1;
-		}
-		else
-		{
-			return id2;
-		}
-	}
+	
 
 }

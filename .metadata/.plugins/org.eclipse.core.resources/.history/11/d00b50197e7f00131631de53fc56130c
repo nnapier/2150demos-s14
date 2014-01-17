@@ -14,7 +14,6 @@ import java.util.Date;
 public class ClawCardTester
 {
 
-	
 	/**
 	 * @param args
 	 */
@@ -39,8 +38,6 @@ public class ClawCardTester
 		
 		ClawCard card3 = new ClawCard("Nannette");
 		System.out.println( card3);
-		
-		System.out.println(" The min Id is: " +  ClawCard.min(9494, 3834834) );
 		
 	}
 
