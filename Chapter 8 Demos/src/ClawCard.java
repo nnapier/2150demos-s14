@@ -36,16 +36,16 @@ public class ClawCard
 	 * 1 argument constructor
 	 * @param aName
 	 */
-	public ClawCard(String aName)
+	public ClawCard(String name)
 	{
-		this( aName, "Student");
+		this( name, "Student");
 	}
 	
-	public ClawCard(String aName, String aStatus)
+	public ClawCard(String name, String status)
 	{
 		id = lastIdUsed + 1;
-		name = aName;
-		status = aStatus;
+		this.name = name;
+		this.status = status;
 		valid = true;
 		
 		// Set the dateIssued to the current date		
@@ -151,14 +151,39 @@ public class ClawCard
 	 */
 	public static int min(int id1, int id2)
 	{
+		int minValue = 0;
+		String description = "Hi there";
 		if (id1 < id2)
 		{
-			return id1;
+			String second = "Another one";
+			minValue = id1;
+			System.out.println(second);
 		}
 		else
 		{
-			return id2;
+			minValue = id2;
 		}
+		
+		System.out.println(description);		
+		return minValue;
+	}
+	
+	/**
+	 * 
+	 * @param inputId
+	 * @return
+	 */
+	public static boolean isValidId(int inputId)
+	{
+		boolean result = false;
+		
+		// if inputId is between 9000 and 9999 inclusive
+		if (inputId >= 9000 && inputId <= 9999)
+		{
+			result = true;
+		}
+		
+		return result;
 	}
 
 }

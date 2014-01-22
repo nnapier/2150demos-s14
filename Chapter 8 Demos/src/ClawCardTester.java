@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.Scanner;
 
 /**Class: ClawCardTester
  * @author Nannette Napier
@@ -13,12 +14,50 @@ import java.util.Date;
 
 public class ClawCardTester
 {
-
 	/**
-	 * @param args
+	 * Use a Scanner object to ask the user for their name
+	 * and their status. This information will be used to
+	 * construct a ClawCard object which will be returned.
+	 * @return ClawCard object
 	 */
+	public static ClawCard createClawCardFromUser()
+	{
+		Scanner keyboard = new Scanner(System.in);
+		
+		// Ask the user their name
+		System.out.println("What is your name?");
+		String name = keyboard.nextLine();
+		
+		// Ask the user their status
+		System.out.println("What is your status?");
+		String status = keyboard.nextLine();
+		
+		// Construct the ClawCard object using the information
+		// typed in by the user
+		ClawCard card = new ClawCard(name, status);
+		
+		// Return the ClawCard object
+		return card;
+	}
+
 	public static void main(String[] args)
 	{
+		// 0) Ask the user information to construct a ClawCard
+		//    (Call the createClawCardFromUser method)
+		System.out.println(ClawCardTester.createClawCardFromUser());
+		System.out.println(createClawCardFromUser());  // This is OK, too
+		
+		// Creating 5 users
+		ClawCard user1 = createClawCardFromUser();
+		System.out.println("Id for user1 is: " + user1.getId());
+		System.out.println("Status for user1 is: " + user1.getStatus());
+		
+		ClawCard user2 = createClawCardFromUser();
+		ClawCard user3 = createClawCardFromUser();
+		ClawCard user4 = createClawCardFromUser();
+		ClawCard user5 = createClawCardFromUser();
+		
+		// 1) Creating objects
 		ClawCard card1 = new ClawCard();
 		System.out.println(card1);
 		
@@ -39,7 +78,12 @@ public class ClawCardTester
 		ClawCard card3 = new ClawCard("Nannette");
 		System.out.println( card3);
 		
+		// 2) Testing static methods
 		System.out.println(" The min Id is: " +  ClawCard.min(9494, 3834834) );
+		
+		System.out.println("Is 99 valid id? (Expect false) " + ClawCard.isValidId(99));
+		System.out.println("Is 9000 valid id? (Expect true)" + ClawCard.isValidId(9000));
+		System.out.println("Is 9999 valid id? (Expect true)" + ClawCard.isValidId(9999));
 		
 	}
 
