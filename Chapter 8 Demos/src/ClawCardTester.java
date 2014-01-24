@@ -42,6 +42,23 @@ public class ClawCardTester
 
 	public static void main(String[] args)
 	{
+		
+		// 1) Create a ClawCardList
+		ClawCardList myList = new ClawCardList();
+		
+		// 2) Create 3 ClawCard objects
+		ClawCard card1 = new ClawCard();
+		ClawCard card2 = new ClawCard();
+		ClawCard card3 = new ClawCard();
+		
+		// 3) Add each ClawCard object to the ClawCardList
+		myList.addClawCard(card1);
+		myList.addClawCard(card2);
+		myList.addClawCard(card3);
+		
+		// 4) SOP the ClawCardList
+		System.out.println(myList);
+		/*
 		// 0) Ask the user information to construct a ClawCard
 		//    (Call the createClawCardFromUser method)
 		System.out.println(ClawCardTester.createClawCardFromUser());
@@ -84,7 +101,7 @@ public class ClawCardTester
 		System.out.println("Is 99 valid id? (Expect false) " + ClawCard.isValidId(99));
 		System.out.println("Is 9000 valid id? (Expect true)" + ClawCard.isValidId(9000));
 		System.out.println("Is 9999 valid id? (Expect true)" + ClawCard.isValidId(9999));
-		
+		*/
 	}
 
 }
