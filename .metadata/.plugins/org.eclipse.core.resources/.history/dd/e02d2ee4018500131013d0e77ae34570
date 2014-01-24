@@ -89,8 +89,6 @@ public class ClawCardList
 			sum = sum + element.getId();
 		}
 		
-		average = sum/cardList.size();
-		
 		return average;
 	}
 	

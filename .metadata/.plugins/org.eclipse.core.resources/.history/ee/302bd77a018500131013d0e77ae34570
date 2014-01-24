@@ -74,26 +74,6 @@ public class ClawCardList
 		return count;
 	}
 	
-	/** 
-	 * This method will produce the average of the Claw Card Ids
-	 * 
-	 */
-	public double average()
-	{
-		double average = 0;
-		double sum = 0;
-		
-		// Get the sum of all the Ids
-		for ( ClawCard element : cardList )
-		{
-			sum = sum + element.getId();
-		}
-		
-		average = sum/cardList.size();
-		
-		return average;
-	}
-	
 	/** This method will allow for a nice description
 	 *  of the ClawCardList object. It will display
 	 *  each element.

@@ -81,15 +81,12 @@ public class ClawCardList
 	public double average()
 	{
 		double average = 0;
-		double sum = 0;
 		
 		// Get the sum of all the Ids
 		for ( ClawCard element : cardList )
 		{
-			sum = sum + element.getId();
+			
 		}
-		
-		average = sum/cardList.size();
 		
 		return average;
 	}
