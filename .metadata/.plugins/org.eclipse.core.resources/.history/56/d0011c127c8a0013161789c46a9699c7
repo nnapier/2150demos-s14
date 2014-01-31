@@ -54,7 +54,7 @@ public class ClawCardTester
 		
 		// Construct the ClawCard object using the information
 		// typed in by the user
-		ClawCard card = new ClawCard(name, statusType);
+		ClawCard card = new ClawCard(name, status);
 		
 		// Return the ClawCard object
 		return card;

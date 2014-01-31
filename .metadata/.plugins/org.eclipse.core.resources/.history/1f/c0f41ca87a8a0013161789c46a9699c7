@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 
-
 /**Class: ClawCardList
  * @author Nannette Napier
  * @version 1.0
@@ -54,7 +53,7 @@ public class ClawCardList
 		// Using the enhanced for loop
 		for ( ClawCard element : cardList )
 		{
-			if (element.getStatus() == ClawCard.StatusType.FACULTY)
+			if (element.getStatus().equalsIgnoreCase("Faculty"))
 			{
 				count++;
 			}

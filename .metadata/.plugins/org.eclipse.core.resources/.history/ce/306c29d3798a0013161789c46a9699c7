@@ -36,12 +36,11 @@ public class ClawCard
 	
 	// Constructor
 	/**
-	 * No-argument constructor
+	 * No-arugment constructor
 	 */
 	public ClawCard()
 	{
-		// Step 3 in using enum: To use the values, put the type in front of the constant
-		this("John Doe", StatusType.STUDENT);		
+		this("John Doe", "Student");		
 	}
 	
 	/**
@@ -50,10 +49,10 @@ public class ClawCard
 	 */
 	public ClawCard(String name)
 	{
-		this( name, StatusType.STUDENT);
+		this( name, "Student");
 	}
 	
-	public ClawCard(String name, StatusType status)
+	public ClawCard(String name, String status)
 	{
 		id = lastIdUsed + 1;
 		this.name = name;
@@ -83,7 +82,7 @@ public class ClawCard
 	/**
 	 * @return the status
 	 */
-	public StatusType getStatus()
+	public String getStatus()
 	{
 		return status;
 	}
@@ -118,7 +117,7 @@ public class ClawCard
 	/**
 	 * @param status the status to set
 	 */
-	public void setStatus(StatusType status)
+	public void setStatus(String status)
 	{
 		this.status = status;
 	}

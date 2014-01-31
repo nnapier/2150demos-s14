@@ -40,7 +40,6 @@ public class ClawCard
 	 */
 	public ClawCard()
 	{
-		// Step 3 in using enum: To use the values, put the type in front of the constant
 		this("John Doe", StatusType.STUDENT);		
 	}
 	

@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+import ClawCard.StatusType;
 
 /**Class: ClawCardList
  * @author Nannette Napier
@@ -54,7 +55,7 @@ public class ClawCardList
 		// Using the enhanced for loop
 		for ( ClawCard element : cardList )
 		{
-			if (element.getStatus() == ClawCard.StatusType.FACULTY)
+			if (element.getStatus() == StatusType.FACULTY)
 			{
 				count++;
 			}

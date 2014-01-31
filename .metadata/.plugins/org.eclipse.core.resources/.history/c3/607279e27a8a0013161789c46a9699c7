@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+import ClawCard.StatusType;
 
 /**Class: ClawCardList
  * @author Nannette Napier

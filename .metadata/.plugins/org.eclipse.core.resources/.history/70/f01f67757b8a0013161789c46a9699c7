@@ -34,27 +34,10 @@ public class ClawCardTester
 		
 		// Convert from String status --> enum
 		ClawCard.StatusType statusType;
-		if (status.equalsIgnoreCase("Faculty"))
-		{
-			statusType = ClawCard.StatusType.FACULTY;
-		}
-		else if (status.equalsIgnoreCase("Student"))
-		{
-			statusType = ClawCard.StatusType.STUDENT;
-		}
-		else if ( status.equalsIgnoreCase("Staff"))
-		{
-			statusType = ClawCard.StatusType.STAFF;	
-		}
-		else
-		{
-			statusType = ClawCard.StatusType.OTHER;
-		}
-			
 		
 		// Construct the ClawCard object using the information
 		// typed in by the user
-		ClawCard card = new ClawCard(name, statusType);
+		ClawCard card = new ClawCard(name, status);
 		
 		// Return the ClawCard object
 		return card;
