@@ -1,0 +1,27 @@
+/**Class: NameSorter
+ * @author Nannette Napier
+ * @version 1.0
+ * Course : ITEC 2150 Spring 2014
+ * Written: Jan 31, 2014
+ *
+ * This class - TODO
+ *
+ * Purpose: - TODO
+ */
+
+import java.util.Scanner;
+
+public class NameSorter
+{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args)
+	{
+		// Input name1 as String
+		
+
+	}
+
+}

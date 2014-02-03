@@ -1,0 +1,77 @@
+
+public class Person
+{
+	// instance variables
+	private String name;
+	private String city;
+	
+	// Constructors
+	public Person(String name, String city)
+	{
+		this.name = name;
+		this.city = city;
+	}
+	
+	// 1-arg constructor that passes in the name only
+	// Default the city to "Lawrenceville"
+	public Person(String name)
+	{
+		this(name, "Lawrenceville");
+		
+	}
+	
+	// No-Arg constructor
+	public Person()
+	{
+		this("Nannette", "Atlanta");
+		/* Instead of doing this
+		name = "Nannette";
+		city = "Atlanta";
+		*/
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName()
+	{
+		return name;
+	}
+
+	/**
+	 * @return the city
+	 */
+	public String getCity()
+	{
+		return city;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
+	/**
+	 * @param city the city to set
+	 */
+	public void setCity(String city)
+	{
+		this.city = city;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString()
+	{
+		return "Person [name=" + name + ", city=" + city + "]";
+	}
+	
+	
+	
+
+}

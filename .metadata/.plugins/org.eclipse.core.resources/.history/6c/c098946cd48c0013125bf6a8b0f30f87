@@ -1,0 +1,33 @@
+
+public class Person
+{
+	// instance variables
+	private String name;
+	private String city;
+	
+	// Constructors
+	public Person(String name, String city)
+	{
+		this.name = name;
+		this.city = city;
+	}
+	
+	// 1-arg constructor that passes in the name only
+	// Default the city to "Lawrenceville"
+	public Person(String name)
+	{
+		this(name, "Lawrenceville")
+		
+	}
+	
+	// No-Arg constructor
+	public Person()
+	{
+		this("Nannette", "Atlanta");
+		/* Instead of doing this
+		name = "Nannette";
+		city = "Atlanta";
+		*/
+	}
+
+}
