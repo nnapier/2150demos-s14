@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 
 public class Person
 {
@@ -77,12 +75,6 @@ public class Person
 	// a provided ArrayList that have city of Atlanta
 	public static void removeAllAtlantaPeople(ArrayList<Person> personList)
 	{
-		/* HINT:  When you are looping through the ArrayList, 
-		 * start at the end of the list first. If you Google for help, 
-		 * there will be examples using iterators. We will use this approach 
-		 * later in the semester. Do NOT use iterators now.
-		 */
-		
 		
 	}
 	

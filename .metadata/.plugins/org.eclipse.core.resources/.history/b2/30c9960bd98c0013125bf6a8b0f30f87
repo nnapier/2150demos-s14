@@ -31,14 +31,7 @@ public class PersonTester
 		personList.add(person2);
 		personList.add(person3);
 		
-		// Option 1: Printing the personList
 		System.out.println(personList);
-		
-		// Option 2: Printing the personList
-		for (Person element : personList)
-		{
-			System.out.println(element);
-		}
 		
 
 	}
