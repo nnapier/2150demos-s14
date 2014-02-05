@@ -83,14 +83,6 @@ public class Person
 		 * later in the semester. Do NOT use iterators now.
 		 */
 		
-		for (int i = personList.size() - 1; i >= 0; i--)
-		{
-			Person person = personList.get(i);
-			if (person.getCity().equalsIgnoreCase("Atlanta"))
-			{
-				personList.remove(i);
-			}
-		}
 		
 	}
 	

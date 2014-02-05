@@ -1,0 +1,41 @@
+/**Class: CharacterDemo
+ * @author Nannette Napier
+ * @version 1.0
+ * Course : ITEC 2150 Spring 2014
+ * Written: Feb 5, 2014
+ *
+ * This class - TODO
+ *
+ * Purpose: - TODO
+ */
+
+public class CharacterDemo
+{
+
+	public static int countNumLetters(String str)
+	{
+		int count = 0;
+		
+		// Look at each character in the String
+		// If the character is a Letter, increment count
+		for (int i=0; i < str.length(); i++)
+		{
+			char letter = str.charAt(i);
+			if ( Character.isLetter(letter))
+			{
+				count++;
+			}
+		}
+		
+		return count;
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}
