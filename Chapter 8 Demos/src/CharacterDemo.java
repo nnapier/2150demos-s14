@@ -11,6 +11,43 @@
 
 public class CharacterDemo
 {
+	public static String checkSSNVersion2(String ssn)
+	{
+		String result = "Invalid SSN";
+		
+		// Valid SSNs have ALL of the following characteristics
+		// 1) Length = 11
+		// 2) Dashes appear at positions 3 and 6
+		// 3) The other 9 characters are digits
+
+		int countDash = 0;
+		int countDigits = 0;
+		for (int i=0; i < ssn.length(); i++)
+		{
+			char ch = ssn.charAt(i);
+			if ( (i == 3 || i == 6) &&
+					( ch == '-')
+					)
+			{
+				countDash++;
+			}
+			else if ( Character.isDigit( ch ) )
+			{
+				countDigits++;
+			}
+		}
+		
+		if ( ssn.length() == 11 && 
+			 countDash == 2 &&
+			 countDigits == 9)
+		{
+			result = "Valid SSN";
+		}
+
+		return result;
+
+	}
+	
 	public static String checkSSN(String ssn)
 	{
 		String result = "Invalid SSN";
