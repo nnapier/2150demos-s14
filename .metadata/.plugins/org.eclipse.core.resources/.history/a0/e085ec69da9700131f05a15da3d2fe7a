@@ -1,0 +1,14 @@
+
+public class Pet
+{
+	// Instance variables
+	private String name;
+	private String breed;
+	private String color;
+	private int numLegs;
+	private double weight;
+	
+	// Constructors
+	
+
+}

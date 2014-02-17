@@ -1,0 +1,21 @@
+/**Class: Cat
+ * @author Nannette Napier
+ * @version 1.0
+ * Course : ITEC 2150 Spring 2014
+ * Written: Feb 17, 2014
+ *
+ * This class - TODO
+ *
+ * Purpose: - TODO
+ */
+
+public class Cat extends Pet
+{
+	// Instance variable
+	public enum LitterType { SCOOPABLE, REGULAR, CLUMP_FREE } 
+	
+	private LitterType litterType;
+	
+	
+
+}

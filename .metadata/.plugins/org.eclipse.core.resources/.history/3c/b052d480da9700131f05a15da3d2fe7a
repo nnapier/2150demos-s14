@@ -1,0 +1,27 @@
+
+public class Pet
+{
+	// Instance variables
+	private String name;
+	private String breed;
+	private String color;
+	private int numLegs;
+	private double weight;
+	
+	// Constructors
+	public Pet()
+	{
+		name = "Pet";
+		breed = "mutt";
+		color = "gray";
+		numLegs = 4;
+		weight = 4.5;			
+	}
+	
+	public Pet(String name, String breed, String color,
+			   int numLegs, double weight)
+	{
+		
+	}
+
+}
