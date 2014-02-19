@@ -37,18 +37,6 @@ public class Cat extends Pet
 	}
 
 	/**
-	 * Changing the default behavior of the setColor method.
-	 * The change will be: I'm adding an SOP statement
-	 * and THEN I will call the super class version of setColor
-	 */
-	@Override
-	public void setColor(String color)
-	{
-		System.out.println("--> In the Cat version of setColor");
-		super.setColor(color);
-	}
-	
-	/**
 	 * @return the litterType
 	 */
 	public LitterType getLitterType()
@@ -74,16 +62,6 @@ public class Cat extends Pet
 				"\nCat [litterType=" + litterType + "]";
 	}
 	
-	public void makeKittyHappy()
-	{
-		// Change name to add "Happy " in front
-		super.setName( "Happy " + super.getName());
-		
-		// Change weight to add 2.0 to the weight
-		super.setWeight(2.0 + getWeight());
-		
-		// Change litter type to SCOOPABLE
-		litterType = LitterType.SCOOPABLE;
-	}
+	
 
 }

@@ -45,7 +45,6 @@ public class Cat extends Pet
 	public void setColor(String color)
 	{
 		System.out.println("--> In the Cat version of setColor");
-		super.setColor(color);
 	}
 	
 	/**
