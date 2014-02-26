@@ -201,26 +201,10 @@ public class ApplianceTester
 	 }
 
 	 // SOP the applianceList using the enhanced for loop
-	 int countDryers = 0;
-	 int countMicrowaves = 0;
-	 double totalCapacity = 0;
 	 for (Appliance element : applianceList)
 	 {
-		 if ( element instanceof Dryer)
-		 {
-			 totalCapacity += ((Dryer) element).getCapacity();
-			 countDryers++;
-		 }
-		 else if ( element instanceof Microwave)
-		 {
-			 countMicrowaves++;
-		 }
 		 System.out.println(element);
 	 }
-	 
-	 System.out.println("Count of dryers: " + countDryers);
-	 System.out.println("Count of microwaves: " + countMicrowaves);
-	 System.out.println("Average capacity: " + totalCapacity/countDryers);
 /*
 
   if ( testDryerMethods() )

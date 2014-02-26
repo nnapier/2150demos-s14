@@ -163,11 +163,11 @@ public boolean equals(Object obj)
   {
    setLifeLeft(getLifeLeft() - 10);
   }
-  else if(power == PowerLevel.MEDIUM)
+  if(power == PowerLevel.MEDIUM)
   {
    setLifeLeft(getLifeLeft() - 20);
   }
-  else if(power == PowerLevel.HIGH)
+  if(power == PowerLevel.HIGH)
   {
    setLifeLeft(getLifeLeft() - 25);
   }
