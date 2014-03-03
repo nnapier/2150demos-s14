@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+
+/**Class: ShoppingCartTester
+ * @author Nannette Napier
+ * @version 1.0
+ * Course : ITEC 2150 Spring 2014
+ * Written: Mar 3, 2014
+ *
+ * This class - TODO
+ *
+ * Purpose: - TODO
+ */
+
+public class ShoppingCartTester
+{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args)
+	{
+		ArrayList<Sellable> cart = new ArrayList<Sellable>();
+		
+		// Assume that we have added some items to the cart here
+		
+		// Do some computations
+		// 1) Compute the total price of all elements in the ArrayList
+		double totalPrice = 0;
+		for ( Sellable element : cart)
+		{
+			totalPrice = totalPrice + element.getPrice();
+		}
+		System.out.println("Total Price of items in cart is: " + totalPrice);
+		
+		// 2) Compute number of elements that are eligible for free shipping
+		int countEligible = 0;
+		
+
+	}
+
+}
