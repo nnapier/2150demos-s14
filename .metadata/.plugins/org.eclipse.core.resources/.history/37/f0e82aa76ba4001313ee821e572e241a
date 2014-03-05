@@ -20,7 +20,7 @@ public class ShoppingCartTester
 	 */
 	public static void main(String[] args)
 	{
-		ArrayList<Sellable> cart = new ArrayList<Sellable>();
+		ArrayList<Book> cart = new ArrayList<Book>();
 		
 		// Assume that we have added some items to the cart here
 		Book book1 = new Book();
@@ -31,13 +31,10 @@ public class ShoppingCartTester
 		book3.setPrice(30);
 		Book book4 = new Book("C Title", "C Author");
 		book4.setPrice(40);
-		Book book5 = new Book("Same Title", "C Author");
-		book5.setPrice(15);
 		cart.add(book1);
 		cart.add(book2);
 		cart.add(book3);
 		cart.add(book4);
-		cart.add(book5);
 		
 		System.out.println("Cart before sorting: " + cart);
 		
@@ -63,14 +60,7 @@ public class ShoppingCartTester
 		                   + countEligible);
 
 		// 3) Sort the items in the cart by author's name
-		ArrayList<Book>  bookList = new ArrayList<Book>();
-		for ( Sellable element : cart)
-		{
-			bookList.add((Book)element);
-		}
-		
-		Collections.sort(bookList);
-		System.out.println("Cart AFTER sorting: " + bookList);
+		Collections.sort(cart);
 		
 	}
 

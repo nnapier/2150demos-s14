@@ -37,7 +37,6 @@ public class ShoppingCartTester
 		cart.add(book2);
 		cart.add(book3);
 		cart.add(book4);
-		cart.add(book5);
 		
 		System.out.println("Cart before sorting: " + cart);
 		

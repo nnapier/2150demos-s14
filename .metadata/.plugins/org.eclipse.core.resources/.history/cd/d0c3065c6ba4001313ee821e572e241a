@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**Class: ShoppingCartTester
  * @author Nannette Napier
@@ -31,15 +30,11 @@ public class ShoppingCartTester
 		book3.setPrice(30);
 		Book book4 = new Book("C Title", "C Author");
 		book4.setPrice(40);
-		Book book5 = new Book("Same Title", "C Author");
-		book5.setPrice(15);
 		cart.add(book1);
 		cart.add(book2);
 		cart.add(book3);
 		cart.add(book4);
-		cart.add(book5);
 		
-		System.out.println("Cart before sorting: " + cart);
 		
 		// Do some computations
 		// 1) Compute the total price of all elements in the ArrayList
@@ -62,16 +57,6 @@ public class ShoppingCartTester
 		System.out.println("Total number of items eligible for free shipping: " 
 		                   + countEligible);
 
-		// 3) Sort the items in the cart by author's name
-		ArrayList<Book>  bookList = new ArrayList<Book>();
-		for ( Sellable element : cart)
-		{
-			bookList.add((Book)element);
-		}
-		
-		Collections.sort(bookList);
-		System.out.println("Cart AFTER sorting: " + bookList);
-		
 	}
 
 }

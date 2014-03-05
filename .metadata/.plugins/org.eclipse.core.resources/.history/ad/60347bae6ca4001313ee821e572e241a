@@ -157,63 +157,11 @@ public boolean isEligibleForFreeShipping()
 	return isEligible;
 }
 
-// Example of sorting by TWO keys
-@Override
-public int compareTo(Book other)
-{
-	int result = 0;
-	
-	if ( author.equals(other.getAuthor()))
-	{
-		// Authors are the same. We need to look at the price
-		// to determine which book should come first
-		if ( price < other.getPrice())
-		{
-			// This price is cheaper. Put it at the top 
-			// of the list
-			result = -1;    
-		}
-		else if (price == other.getPrice())
-		{
-			result = 0;
-		}
-		else
-		{
-			result = 1;
-		}
-	}
-	else
-	{
-		// Authors are NOT the same
-		result = author.compareTo( other.getAuthor());
-	}
-	
-	return result;
-}
-/*	NOTE: This is the version that sorts by Author's name ONLY
 @Override
 public int compareTo(Book other)
 {
 	// Compare the books based upon the author's name ONLY
-	// return author.compareTo(other.getAuthor());
-	int result = 0;
-	if (author.equals(other.getAuthor()))
-	{
-		result = 0;
-	}
-	else if (author.compareTo(other.getAuthor()) < 0)
-	{
-		result = -1;
-	}
-	else
-	{
-		result = 1;
-	}
-	
-	return result;
-	
-	
+	return author.compareTo(other.getAuthor());
 }
-*/
 
 }

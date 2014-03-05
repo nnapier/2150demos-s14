@@ -157,7 +157,6 @@ public boolean isEligibleForFreeShipping()
 	return isEligible;
 }
 
-// Example of sorting by TWO keys
 @Override
 public int compareTo(Book other)
 {
