@@ -73,7 +73,7 @@ public class ShoppingCartTester
 		System.out.println("Cart AFTER sorting by author name and price: " + bookList);
 		
 		Collections.sort(bookList, new BookGenreAuthorComparator());
-		System.out.println("Cart AFTER using BookGenreAuthorComparator: \n" + bookList);
+		
 	}
 
 }

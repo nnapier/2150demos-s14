@@ -1,0 +1,17 @@
+import java.util.Comparator;
+
+/**Class: BookGenreAuthorComparator
+ * @author Nannette Napier
+ * @version 1.0
+ * Course : ITEC 2150 Spring 2014
+ * Written: Mar 19, 2014
+ *
+ * This class - TODO
+ *
+ * Purpose: - TODO
+ */
+
+public class BookGenreAuthorComparator implements Comparator<Book>
+{
+
+}

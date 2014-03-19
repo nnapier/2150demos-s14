@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Random;
@@ -24,21 +23,6 @@ public class GradeDemo
 	{
 		double sum = 0;
 		double average = 0;
-		
-		// Step 1: Use the iterator to find the sum
-		Iterator<Integer> iterator = c.iterator();
-		
-		while ( iterator.hasNext())
-		{
-			int num = iterator.next();
-			sum += num;
-		}
-		
-		// Step 2: Compute the average
-		if (c.size() > 0)
-		{
-			average = sum/c.size();
-		}		
 		
 		return average;
 	}
@@ -67,27 +51,13 @@ public class GradeDemo
 	{
 		ArrayList<Integer> grade1 = new ArrayList<Integer>();
 		populateRandomGrades(grade1, 4);
-		System.out.println("grade1 average is: " + findAverage(grade1));
 		
 		LinkedList<Integer> grade2 = new LinkedList<Integer>();
 		populateRandomGrades(grade2, 5);
-		System.out.println("grade2 average is: " + findAverage(grade2));
 		
 		PriorityQueue<Integer> grade3 = new PriorityQueue<Integer>();
 		populateRandomGrades(grade3, 6);
-		System.out.println("grade3 average is: " + findAverage(grade3));
 
-		ArrayList<Integer> allGrades = new ArrayList<Integer>();
-		allGrades.addAll(grade1);
-		allGrades.addAll(grade2);
-		allGrades.addAll(grade3);
-		
-		ArrayList<Integer> emptyList = new ArrayList<Integer>();
-		// removeMiddleUsingIterator( emptyList );
-		
-		System.out.println("allGrades average is: " + findAverage(allGrades));
-		
-		
 	}
 
 }

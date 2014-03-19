@@ -83,7 +83,7 @@ public class GradeDemo
 		allGrades.addAll(grade3);
 		
 		ArrayList<Integer> emptyList = new ArrayList<Integer>();
-		// removeMiddleUsingIterator( emptyList );
+		removeMiddleUsingIterator( emptyList );
 		
 		System.out.println("allGrades average is: " + findAverage(allGrades));
 		

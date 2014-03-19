@@ -67,27 +67,14 @@ public class GradeDemo
 	{
 		ArrayList<Integer> grade1 = new ArrayList<Integer>();
 		populateRandomGrades(grade1, 4);
-		System.out.println("grade1 average is: " + findAverage(grade1));
+		System.out.println( findAverage(grade1));
 		
 		LinkedList<Integer> grade2 = new LinkedList<Integer>();
 		populateRandomGrades(grade2, 5);
-		System.out.println("grade2 average is: " + findAverage(grade2));
 		
 		PriorityQueue<Integer> grade3 = new PriorityQueue<Integer>();
 		populateRandomGrades(grade3, 6);
-		System.out.println("grade3 average is: " + findAverage(grade3));
 
-		ArrayList<Integer> allGrades = new ArrayList<Integer>();
-		allGrades.addAll(grade1);
-		allGrades.addAll(grade2);
-		allGrades.addAll(grade3);
-		
-		ArrayList<Integer> emptyList = new ArrayList<Integer>();
-		// removeMiddleUsingIterator( emptyList );
-		
-		System.out.println("allGrades average is: " + findAverage(allGrades));
-		
-		
 	}
 
 }
