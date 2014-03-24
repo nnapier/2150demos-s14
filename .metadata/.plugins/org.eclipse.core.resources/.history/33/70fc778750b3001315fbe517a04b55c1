@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
 import java.util.PriorityQueue;
 import java.util.Random;
 
@@ -25,7 +24,6 @@ public class GradeDemo
 	
 	public static double findAverage(Collection<Integer> c)
 	{
-	
 		double sum = 0;
 		double average = 0;
 		
@@ -73,20 +71,6 @@ public class GradeDemo
 	public static void removeMiddle(List<Integer> list)
 	{
 		
-		if (!list.isEmpty())
-		{
-			int midPoint = list.size()/2;
-			list.remove( midPoint );
-		}
-	}
-	
-	public static void displayFromEnd(List<Integer> list)
-	{
-		ListIterator<Integer> iterator = list.listIterator(list.size());
-		while (iterator.hasPrevious())
-		{
-			System.out.println(iterator.previous());
-		}
 	}
 	
 	public static void main(String[] args)

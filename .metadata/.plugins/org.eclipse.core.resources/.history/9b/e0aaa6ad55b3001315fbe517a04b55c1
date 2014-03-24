@@ -83,12 +83,12 @@ public class GradeDemo
 	public static void displayFromEnd(List<Integer> list)
 	{
 		ListIterator<Integer> iterator = list.listIterator(list.size());
-		while (iterator.hasPrevious())
+		if ( !list.isEmpty())
 		{
-			System.out.println(iterator.previous());
+			int midPoint = list.size()/2;
+			list.remove(index)
 		}
 	}
-	
 	public static void main(String[] args)
 	{
 		ArrayList<Integer> grade1 = new ArrayList<Integer>();

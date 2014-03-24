@@ -88,7 +88,6 @@ public class GradeDemo
 			System.out.println(iterator.previous());
 		}
 	}
-	
 	public static void main(String[] args)
 	{
 		ArrayList<Integer> grade1 = new ArrayList<Integer>();
