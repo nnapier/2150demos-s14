@@ -1,0 +1,43 @@
+import java.util.Iterator;
+import java.util.Queue;
+
+/**Class: QueueExample
+ * @author Nannette Napier
+ * @version 1.0
+ * Course : ITEC 2150 Spring 2014
+ * Written: Mar 26, 2014
+ *
+ * This class - TODO
+ *
+ * Purpose: - TODO
+ */
+
+public class QueueExample
+{
+
+	public static boolean containsValueWithIterator(Queue<String> q, String value)
+	{
+		boolean result = false;
+		
+		Iterator<String> iter = q.iterator();
+		while (iter.hasNext())
+		{
+			String name = iter.next();
+			if (q.peek().equals(value))
+			{
+				result = true;
+			}
+		}
+		
+		return result;
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}
