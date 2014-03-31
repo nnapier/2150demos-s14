@@ -3,9 +3,7 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="ClawCard.StatusType"/>
 <fullyQualifiedTypeName name="Cat.LitterType"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Collection"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="java.util.List"/>
@@ -15,4 +13,10 @@
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="java.util.Queue"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+<fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
 </qualifiedTypeNameHistroy>
