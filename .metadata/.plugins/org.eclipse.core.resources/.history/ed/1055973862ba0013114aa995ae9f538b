@@ -13,7 +13,7 @@ public class ExceptionDemo
 		public static BookType getEnum(String str)
 		{
 			BookType result = COMPUTING;
-
+			
 			// HINT #1: DO THE WORK HERE!!!!
 			// HINT #2: Remember that BookType.valueOf(str)
 			//          will already convert from String --> enum
@@ -52,13 +52,13 @@ public class ExceptionDemo
 			{
 				// Print the exception information
 				exc.printStackTrace();
-
+				
 				// Add a default value of 0 to the arrayList
 				numList.add(0);
-
+				
 				// SOP a message that you are using a default value
 				System.out.println("Invalid info: using default value");
-
+				
 				// Read the newline character
 				keyboard.nextLine();
 			}
@@ -86,60 +86,16 @@ public class ExceptionDemo
 		System.out.println("Book type for null is: " +
 				BookType.getEnum(null));
 	}
-
-
-
+	
+	
+	
 	public static void main(String[] args)
 	{
-		// A valid book
 		Book book1 = new Book("Valid Title", "Valid Author");
-		System.out.println(book1);
-
-		try
-		{
-			// A book with empty title
-			Book book2 = new Book("", "Valid Author");
-			System.out.println(book2);
-		}
-		catch(Exception exc)
-		{
-			System.err.println("Book2: Please enter valid information next time!!!");
-		}
-
-		try
-		{
-			// A book with empty author
-			Book book3 = new Book("Valid Title", "");
-			System.out.println(book3);
-		}
-		catch(Exception exc)
-		{
-			System.err.println("Book3: Do you listen??!!! Please do better next time");
-		}
-
-		try
-		{
-			// A book with a null title and null author
-			Book book4 = new Book(null, null);
-			System.out.println(book4);
-		}
-		catch(IllegalArgumentException exc)
-		{
-			System.err.println("This is illegal. Let us fix the user interface");
-		}
-		catch(NullPointerException exc)
-		{
-			System.err.println("Should never get to this point. Call the developers");
-		}
-		catch(InvalidPriceException exc)
-		{
-			// do something special
-		}
-		catch(Exception exc)
-		{
-			System.err.println("Book4");
-		}
-
+		Book book2 = new Book("", "Valid Author");
+		Book book3 = new Book("Valid Title", "");
+		Book book4 = new Book(null, null);
+		
 		//practiceEnumConversion();
 		// input4Numbers();
 	}
