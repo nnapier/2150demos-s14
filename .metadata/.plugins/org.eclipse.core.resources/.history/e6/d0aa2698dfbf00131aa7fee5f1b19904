@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 /**Class: Book
  * @author Nannette Napier
  * @version 1.0
@@ -19,6 +23,49 @@ public class Book implements Sellable, Comparable<Book>
 	private String material;    // Hardback, paperback,
 
 	// Constructors
+
+	/**
+	 * Constructor that takes a File as a parameter
+	 * @param file File object containing data
+	 */
+	public Book(File file)
+	{
+		try
+		{
+			// Step 2: Create the Scanner
+			Scanner input = new Scanner(file);
+			title = input.nextLine();  // Reads first line, if any
+			author = input.nextLine(); // Reads second line, if any
+			price = input.nextDouble(); // Reads third line, if any
+			genre = input.nextLine();  // Reads 4th line, if any
+			material = input.nextLine(); // Reads 5th line, if any
+			
+			input.close();
+			// Exceptions that could be thrown
+			//   IllegalStateException
+			//   NoSuchElementException
+			//   InputMismatchException		
+		}
+		catch(FileNotFoundException exc)
+		{
+			System.err.println("Could not read file: " + file.getName());
+			title = "File not found";
+			author = "Author not found";
+			price = 100;
+			genre = "Whatever";
+			material = "Unknown";
+		}
+		catch(Exception exc)
+		{
+			System.err.println("Some kind of exception was thrown");
+			title = "Something else";
+			author = "Author is something else";
+			price = 10;
+			genre = "Yep";
+			material = "Paperback";
+		}
+	}
+
 	/**
 	 * Method: No-argument constructor for Book class 
 	 */

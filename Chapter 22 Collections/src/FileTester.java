@@ -81,6 +81,28 @@ public class FileTester
 		return count;
 	}
 
+	/*
+	 * This method should
+	 * Use Scanner System.in to ask the user’s name, age, and favorite color
+	 * The method should then write this information to a file called aboutme.txt
+	 * Use try-catch
+
+	 */
+	public static void writeAboutMe()
+	{
+		// ask the user’s name, age, and favorite color
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("What is your name?");
+		String name = keyboard.nextLine();
+		
+		System.out.println("What is your age?");
+		String age = keyboard.nextLine();
+		
+		System.out.println("What is your favorite color?");
+		String color = keyboard.nextLine();
+		
+	}
+	
 	public static void main(String[] args) throws FileNotFoundException
 	{
 		File file = new File("sample.txt");

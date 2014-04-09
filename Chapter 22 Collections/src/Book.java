@@ -37,6 +37,8 @@ public class Book implements Sellable, Comparable<Book>
 			title = input.nextLine();  // Reads first line, if any
 			author = input.nextLine(); // Reads second line, if any
 			price = input.nextDouble(); // Reads third line, if any
+			// consume the new line char?
+			input.nextLine();
 			genre = input.nextLine();  // Reads 4th line, if any
 			material = input.nextLine(); // Reads 5th line, if any
 			

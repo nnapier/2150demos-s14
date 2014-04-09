@@ -1,0 +1,21 @@
+/**Class: DelimiterTester
+ * @author Nannette Napier
+ * @version 1.0
+ * Course : ITEC 2150 Spring 2014
+ * Written: Apr 9, 2014
+ *
+ * This class - TODO
+ *
+ * Purpose: - TODO
+ */
+
+public class DelimiterTester
+{
+	
+	public static void main(String[] args)
+	{
+		String line = "Hi|Bye|Yes|No";
+
+	}
+
+}
