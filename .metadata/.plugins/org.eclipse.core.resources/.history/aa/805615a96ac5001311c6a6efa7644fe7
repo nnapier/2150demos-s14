@@ -1,0 +1,183 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ * Class: Transaction.java
+ * @author JJ Lindsay
+ * @version 1.0
+ * Course : ITEC 2150 Spring 2014
+ * Written: April 13, 2014
+ *
+ * This class represents a Transaction tester.
+ *
+ * Purpose: To build a Transaction using a file or the traditional constructor.
+ */
+
+public class Transaction implements Comparable<Transaction>
+{
+	private String productName;
+	private String operator;
+	private int numProductsMade;
+	private int numDefects;
+
+
+	/**Four argument constructor
+	 * @param productName the name of the product
+	 * @param operator the name of the operator
+	 * @param numProductsMade the number of products made
+	 * @param numDefects the number of defects
+	 */
+	public Transaction(String productName, String operator, int numProductsMade, int numDefects)
+	{
+		this.productName = productName;
+		this.operator = operator;
+		this.numProductsMade = numProductsMade;
+		this.numDefects = numDefects;
+	}
+
+	/**One argument constructor
+	 * @param fileLine A line of file information
+	 * @throws IllegalArgumentException An Exception for mismatched assignments
+	 */
+	public Transaction(String fileLine)
+	{
+		String[] words = fileLine.split("[,]");
+
+		if(words.length == 4) //&& !words[0].isEmpty() && !words[1].isEmpty() && Integer.parseInt(words[2]) >= 0 && Integer.parseInt(words[3]) >= 0)
+		{
+			this.productName = words[0];
+			this.operator = words[1];
+			this.numProductsMade = Integer.parseInt(words[2]);
+			this.numDefects = Integer.parseInt(words[3]); 
+		}
+		else
+		{
+			throw new IllegalArgumentException();
+		}
+	}
+
+	/**Gets the name of the product
+	 * @return productName 
+	 */
+	public String getProductName()
+	{
+		return productName;
+	}
+
+	/**
+	 * @param productName Set the product name
+	 */
+	public void setProductName(String productName)
+	{
+		this.productName = productName;
+	}
+
+	/**Gets the operator
+	 * @return operator 
+	 */
+	public String getOperator()
+	{
+		return operator;
+	}
+
+	/**
+	 * @param operator Sets the operator
+	 */
+	public void setOperator(String operator)
+	{
+		this.operator = operator;
+	}
+
+	/**Gets the number of products made
+	 * @return numProductsMade 
+	 */
+	public int getNumProductsMade()
+	{
+		return numProductsMade;
+	}
+
+	/**
+	 * @param numProductsMade Sets the number of products made
+	 */
+	public void setNumProductsMade(int numProductsMade)
+	{
+		this.numProductsMade = numProductsMade;
+	}
+
+	/**Gets the number of defects
+	 * @return numDefects 
+	 */
+	public int getNumDefects()
+	{
+		return numDefects;
+	}
+
+	/**
+	 * @param numDefects Sets the number of defects
+	 */
+	public void setNumDefects(int numDefects)
+	{
+		this.numDefects = numDefects;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "Transaction [productName=" + productName + ", operator="
+				+ operator + ", numProductsMade=" + numProductsMade
+				+ ", numDefects=" + numDefects + "]\n";
+	}
+
+	@Override
+	public int compareTo(Transaction other)
+	{
+		return this.productName.compareToIgnoreCase(other.productName);
+	}
+
+	/**Reads a file and builds an arrayList of its transactions
+	 * @param fileName The file name
+	 * @return myTransactions An arrayList of transactions
+	 * @throws FileNotFoundException An Exception for files not found
+	 */
+	public static ArrayList<Transaction> readFile(String fileName)
+	{
+		File file = new File(fileName);
+
+		ArrayList<Transaction> myTransactions = new ArrayList<Transaction>();
+
+		if(file.exists())
+		{
+			try
+			{
+				Scanner input = new Scanner(file);
+				while(input.hasNextLine())
+				{
+					String line = input.nextLine();
+
+					try
+					{
+						Transaction temp = new Transaction(line);
+						myTransactions.add(temp);
+					}
+					catch(Exception exc)
+					{
+						System.err.println("An incorrectly formatted transaction was removed.");
+					}
+				}
+			}
+			catch(Exception exc)
+			{
+
+			}
+
+			input.close();
+		}
+		else
+		{
+			throw new FileNotFoundException("Hey!! What are you doing! This file name doesn't exisit.");
+		}
+		return myTransactions;
+	}
+}
